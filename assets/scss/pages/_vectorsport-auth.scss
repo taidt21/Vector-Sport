@@ -1,0 +1,301 @@
+.vs-auth {
+  max-width: 760px;
+  margin: 0 auto;
+  color: $vs-color-text;
+  font-family: inherit;
+margin-top: $height-header;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  &__section {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    font-size: $title-font-size;
+    font-weight: 700;
+    color: $vs-color-heading;
+  }
+
+  &__socials {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 50px;
+    padding: 0 16px;
+    border: 1px solid #1f2937;
+    border-radius: $vs-radius-md;
+    text-decoration: none;
+    color: $vs-color-text;
+    background: $vs-color-white;
+    transition: background-color .2s ease, border-color .2s ease;
+
+    &:hover {
+      background: #f8fafc;
+    }
+  }
+
+  &__social-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    flex-shrink: 0;
+
+    &--facebook {
+      color: $vs-color-facebook;
+    }
+
+    &--google {
+      color: $vs-color-google;
+    }
+  }
+
+  &__card {
+    border: 1px solid $vs-color-border;
+    border-radius: $vs-radius-md;
+    padding: 24px;
+    background: $vs-color-white;
+  }
+
+  &__field + &__field,
+  &__field + &__desc,
+  &__desc + &__checkbox,
+  &__checkbox + &__privacy,
+  &__privacy + &__actions {
+    margin-top: 18px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: $vs-color-text;
+  }
+
+  &__required {
+    color: $vs-color-danger;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid $vs-color-input-border;
+    border-radius: $vs-radius-sm;
+    padding: 12px 14px;
+    font-size: 16px;
+    background: $vs-color-white;
+    color: $vs-color-text;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $vs-color-text;
+    }
+
+    &--password {
+      padding-right: 54px;
+    }
+  }
+
+  &__password-wrap {
+    position: relative;
+  }
+
+  &__toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+    color: $vs-color-text;
+    padding: 0;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__captcha {
+    margin-top: 10px;
+  }
+
+  &__captcha-box {
+    display: grid;
+    grid-template-columns: 26px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    max-width: 310px;
+    min-height: 62px;
+    padding: 0 10px;
+    border: 1px solid $vs-color-captcha-border;
+    background: $vs-color-white;
+  }
+
+  &__captcha-check {
+    width: 22px;
+    height: 22px;
+    border: 2px solid $vs-color-captcha-check;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  &__captcha-text {
+    font-size: 14px;
+    color: $vs-color-text;
+  }
+
+  &__captcha-badge {
+    font-size: 11px;
+    color: $vs-color-captcha-badge;
+    white-space: nowrap;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 15px;
+    color: $vs-color-text;
+    cursor: pointer;
+
+    input {
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__actions {
+    margin-top: 18px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 118px;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid $vs-color-heading;
+    border-radius: $vs-radius-lg;
+    background: $vs-color-heading;
+    color: $vs-color-white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .2s ease, background-color .2s ease, color .2s ease;
+
+    &:hover {
+      opacity: .92;
+    }
+
+    &--secondary {
+      background: $vs-color-white;
+      color: $vs-color-heading;
+    }
+  }
+
+  &__lost-password {
+    display: inline-block;
+    margin-top: 18px;
+    color: $vs-color-heading;
+    text-decoration: none;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__desc,
+  &__privacy {
+    margin: 0;
+    font-size: 15px;
+    color: $vs-color-text;
+  }
+
+  &__privacy {
+    a {
+      color: $vs-color-heading;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__notice {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: $vs-radius-lg;
+    font-size: 15px;
+
+    &--success {
+      background: $vs-color-success-bg;
+      color: $vs-color-success-text;
+      border: 1px solid $vs-color-success-border;
+    }
+
+    &--error {
+      background: $vs-color-error-bg;
+      color: $vs-color-error-text;
+      border: 1px solid $vs-color-error-border;
+    }
+  }
+
+  &__logged-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: $vs-breakpoint-mobile) {
+  .vs-auth {
+    &__title {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    &__card {
+      padding: 22px 18px;
+    }
+
+    &__social {
+      min-height: 48px;
+      padding: 0 12px;
+      gap: 14px;
+    }
+
+    &__input {
+      min-height: 48px;
+    }
+
+    &__button {
+      min-height: 46px;
+      padding: 0 20px;
+    }
+  }
+}

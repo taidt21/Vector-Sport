@@ -1,0 +1,27 @@
+{
+    "remotePath": "/htdocs/wp-content/themes/vietvodao",
+    "host": "ftpupload.net",
+		"username": "icei_40691944",
+		"password": "2112004tai",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": true,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}

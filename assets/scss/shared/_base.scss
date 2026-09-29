@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin-top: 0 !important;
+
+    overflow-x: hidden;
+    @media(max-width:$bp-lg) {
+    }
+}
+
+#wpadminbar {
+    display: none !important;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    color: $text-color;
+    width: 100vw;
+
+    @media(max-width:$bp-lg) {
+        overflow-x: hidden;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+
+button {
+    background: unset;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    width: 100%;
+        @media(min-width:$bp-sm ){
+        max-width:540px
+    }
+    @media(min-width:$bp-md ){
+        max-width:720px
+    }
+    @media(min-width:$bp-lg ){
+        max-width:960px
+    }
+    @media(min-width:$bp-xl ){
+        max-width:1140px
+    }
+        @media(min-width:$bp-xxl ){
+        max-width:1320px
+    }
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+    margin: 0 auto;
+
+}
+
+.small,
+small {
+    font-size: 80%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $title-color;
+    font-weight: 700;
+}

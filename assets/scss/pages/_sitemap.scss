@@ -1,0 +1,111 @@
+.site-sitemap-page {
+    background: $white-color;
+}
+
+.site-sitemap-hero {
+    padding: 48px 0;
+    background: linear-gradient(135deg, $background-color 0%, $white-color 100%);
+
+    @media (min-width: $bp-md) {
+        padding: 72px 0;
+    }
+
+    &__content {
+        max-width: 760px;
+    }
+
+    &__eyebrow {
+        margin: 0 0 10px;
+        color: $primary-color;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin: 0;
+        color: $title-color;
+        font-size: $title-font-size-section;
+        font-weight: 700;
+    }
+
+    &__desc {
+        max-width: 620px;
+        margin: 14px 0 0;
+        color: $text-color;
+        font-size: 16px;
+    }
+}
+
+.site-sitemap-content {
+    padding: $padding-section-mobile 0;
+
+    @media (min-width: $bp-lg) {
+        padding: $padding-section 0;
+    }
+}
+
+.site-sitemap-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    @media (min-width: $bp-md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: $bp-xl) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.site-sitemap-card {
+    padding: 22px;
+    border: 1px solid rgba($title-color, 0.08);
+    border-radius: 22px;
+    background: $white-color;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+
+    &--wide {
+        @media (min-width: $bp-md) {
+            grid-column: span 2;
+        }
+    }
+
+    h2 {
+        margin: 0 0 16px;
+        color: $title-color;
+        font-size: clamp(20px, 2vw, 26px);
+        font-weight: 700;
+    }
+
+    ul {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        display: inline-flex;
+        color: $text-color;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.site-sitemap-list--columns {
+    @media (min-width: $bp-md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

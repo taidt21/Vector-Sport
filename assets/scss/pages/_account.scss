@@ -1,0 +1,173 @@
+@import "../shared/_variables.scss";
+.vs-account-template {
+  padding: 24px 0 48px;
+  background: #fff;
+  margin-top: $height-header;
+}
+
+.vs-account-page {
+  &__title {
+    margin: 0 0 24px;
+    font-size: $title-font-size;
+    font-weight: 700;
+    color: #0f1720;
+  }
+}
+
+.vs-account {
+  display: block;
+
+  &__notice {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+
+    &.is-success {
+      background: #eefcf3;
+      border: 1px solid #9be3b3;
+      color: #17663a;
+    }
+
+    &.is-error {
+      background: #fff1f1;
+      border: 1px solid #f0b0b0;
+      color: #a12828;
+    }
+  }
+
+  &__sidebar {
+    margin-bottom: 24px;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menu-item {
+    margin-bottom: 14px;
+
+    &.is-active {
+      .vs-account__menu-link {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__menu-link {
+    color: #0f1720;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  &__content {
+    color: #0f1720;
+  }
+}
+
+.vs-account-box {
+  p {
+    margin: 0 0 18px;
+    font-size: 18px;
+  }
+
+  a {
+    color: #0f1720;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.vs-account-form {
+  &__row {
+    margin-bottom: 18px;
+  }
+
+  &__grid {
+    display: block;
+  }
+
+  &__divider {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0f1720;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    border: 1px solid #bfc5ce;
+    border-radius: 6px;
+    background: #fff;
+    color: #0f1720;
+    font-size: 15px;
+    outline: none;
+
+    &:focus {
+      border-color: #0f1720;
+    }
+  }
+
+  textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+}
+
+.vs-account-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 1px solid #0f1720;
+  border-radius: 6px;
+  background: #0f1720;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: $bp-lg) {
+  .vs-account {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+
+    &__sidebar {
+      margin-bottom: 0;
+    }
+  }
+
+  .vs-account-form {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+}
